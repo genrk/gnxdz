@@ -8,16 +8,16 @@
         <img width="150" height="75" class="gloryimage" :src="footerLogoLink">
       </div>
       <div class="footpad footicons">
-        Github - <a class="icon-tag" href="https://github.com/tks18/gindex-v4">Shan.tk</a> | Support Me!
+        Github - <a class="icon-tag" href="https://github.com/genrk/gnxdz">Shan.tk</a> | Support Me!
       </div>
       <div class="footpad footer-copyright">
-        Copyright&nbsp;<i class="fas fa-copyright"></i> {{ Date.now() | moment("YYYY") }} | &nbsp;Glory to Heaven 
+        Copyright&nbsp;<i class="fas fa-copyright"></i> {{ Date.now() | moment("YYYY") }} | &nbsp;Glory to Heaven
       </div>
       <div class="footpad footer-policy">
-        Licensed under FrontEnd - <a href="https://github.com/tks18/gindex-v4/blob/dark-mode-0-1/LICENSE" target="_blank"> GPL 3.0 </a> | Backend - <a href="https://github.com/tks18/gindex-v4/blob/dark-mode-0-1/vuejs/LICENSE" target="_blank">MIT</a>
+        Licensed under FrontEnd - <a href="https://github.com/genrk/gnxdz/blob/dark-mode-0-1/LICENSE" target="_blank"> GPL 3.0 </a> | Backend - <a href="https://github.com/genrk/gnxdz/blob/dark-mode-0-1/vuejs/LICENSE" target="_blank">MIT</a>
       </div>
       <div class="footpad footer-code">
-        Please Read our <a href="https://github.com/tks18/gindex-v4/blob/dark-mode-0-1/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a> | <a href="https://raw.githubusercontent.com/tks18/gindex-v4/dark-mode-0-1/CONTRIBUTING.md" target="_blank">Community Guidelines</a>
+        Please Read our <a href="https://github.com/genrk/gnxdz/blob/dark-mode-0-1/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a> | <a href="https://raw.githubusercontent.com/genrk/gnxdz/dark-mode-0-1/CONTRIBUTING.md" target="_blank">Community Guidelines</a>
       </div>
     </div>
   </footer>

@@ -15,7 +15,7 @@ export default {
   },
   data: function() {
     return {
-      github: "https://github.com/tks18/gindex-v4",
+      github: "https://github.com/genrk/gnxdz",
     };
   },
   watch: {
