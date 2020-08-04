@@ -87,18 +87,18 @@
            <span class="icon">
             <i class="fas fa-user-check"></i>
           </span>
-          <span>Register</span>
+          <span>Registrar</span>
           </a>
           <a
             class="navbar-item"
-            title="Request Access"
+            title="Requisitar Acesso"
             v-if="!logged"
             @click="gotoPage('/request/user/', 'register')"
            >
            <span class="icon">
             <i class="fas fa-user-plus"></i>
           </span>
-          <span>Request Access</span>
+          <span>Requisitar acesso</span>
           </a>
           <a
             class="navbar-item"
@@ -126,7 +126,7 @@
           </a>
           <a
             class="navbar-item"
-            title="Admin Panel"
+            title="Painel do ADMIN"
             v-if="logged && admin"
             @click="gotoPage('/','admin')"
            >
@@ -137,14 +137,14 @@
           </a>
           <a
             class="navbar-item"
-            title="Settings"
+            title="Configurações"
             v-if="logged"
             @click="gotoPage('/' ,'settings')"
            >
            <span class="icon">
             <i class="fas fa-user-cog"></i>
           </span>
-          <span class="is-hidden-desktop"> My Settings</span>
+          <span class="is-hidden-desktop"> Minhas configurações</span>
           </a>
           <a
             class="navbar-item"

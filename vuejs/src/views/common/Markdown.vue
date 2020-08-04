@@ -27,7 +27,7 @@ export default {
       return `
         <center>
             <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">Carregando...</span>
         </center>
       `
     }

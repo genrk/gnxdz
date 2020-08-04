@@ -8,15 +8,15 @@
       <div class="columns has-text-white is-centered is-multiline">
         <div class="column is-two-thirds">
           <div class="box has-background-light">
-            <h3 class="title has-text-centered has-text-weight-bold has-text-info-dark">Your Details</h3>
+            <h3 class="title has-text-centered has-text-weight-bold has-text-info-dark">Seus detalhes</h3>
             <div class="columns is-vcentered is-centered is-multiline is-mobile">
               <div class="column has-text-centered is-full">
                 <figure class="image is-128x128 is-inline-block">
-                  <img class="is-rounded" :src="avatar" @click="alerts('Avatar Under Development')">
+                  <img class="is-rounded" :src="avatar" @click="alerts('Avatar em desenvolvimento')">
                 </figure>
               </div>
               <div class="column is-three-fifths">
-                <p class="subtitle">Name</p>
+                <p class="subtitle">Nome</p>
               </div>
               <div class="column is-two-fifths">
                 <p class="subtitle has-text-weight-bold">{{ user.name }}</p>
@@ -28,33 +28,33 @@
                 <p class="subtitle has-text-weight-bold">{{ user.email }}</p>
               </div>
               <div class="column is-three-fifths">
-                <p class="subtitle">Current Role</p>
+                <p class="subtitle">Classe</p>
               </div>
               <div class="column is-two-fifths">
                 <p class="subtitle has-text-weight-bold">{{ user.role }}</p>
               </div>
               <div v-if="!admin && !superadmin || admin && !superadmin" class="column is-three-fifths">
-                <p class="subtitle">Request More Scopes</p>
+                <p class="subtitle">Requisitar mais poderes</p>
               </div>
               <div v-if="!admin && !superadmin || admin && !superadmin" class="column has-text-centered is-two-fifths">
                 <button class="button is-success" @click="gotoPage('/request/', 'settings')">
                   <span class="icon is-small">
                     <i class="fas fa-user-shield"></i>
                   </span>
-                  <span>Request</span>
+                  <span>Requesitar</span>
                 </button>
               </div>
               <div v-if="admin && superadmin" class="column has-text-centered is-full">
-                <p class="subtitle has-text-warning-dark has-text-weight-bold">You Have Maximum Access to this Website</p>
+                <p class="subtitle has-text-warning-dark has-text-weight-bold">Você tem o máximo de acessos para este site./p>
               </div>
               <div class="column is-three-fifths">
-                <p class="subtitle">Last Token Issue Date</p>
+                <p class="subtitle">Último Token Issue Date</p>
               </div>
               <div class="column is-two-fifths">
                 <p class="subtitle has-text-weight-bold">{{ token.issuedate | moment("dddd, MMMM Do YYYY [at] hh:mm A") }}</p>
               </div>
               <div class="column is-three-fifths">
-                <p class="subtitle">Last Token Expiry Date</p>
+                <p class="subtitle">Último Token Expiry Date</p>
               </div>
               <div class="column is-two-fifths">
                 <p class="subtitle has-text-weight-bold">{{ token.expirydate | moment("dddd, MMMM Do YYYY [at] hh:mm A") }}</p>
@@ -66,13 +66,13 @@
           <div class="columns is-multiline is-desktop is-centered">
             <div class="column is-full">
               <div class="box has-background-warning">
-                <h3 class="title has-text-centered has-text-weight-bold">Your Preferences</h3>
+                <h3 class="title has-text-centered has-text-weight-bold">Suas preferencias</h3>
                 <div class="columns is-vcentered is-centered is-multiline is-mobile">
                   <div class="column is-three-fifths">
-                    <p class="subtitle">Change Your Avatar</p>
+                    <p class="subtitle">Mudar avatar</p>
                   </div>
                   <div class="column has-text-centered is-two-fifths">
-                    <button class="button is-rounded is-primary" @click="alerts('Under Development')">
+                    <button class="button is-rounded is-primary" @click="alerts('em desenvolvimento')">
                       <span class="icon is-small">
                         <i class="far fa-user-circle"></i>
                       </span>
@@ -80,21 +80,21 @@
                     </button>
                   </div>
                   <div class="column is-three-fifths">
-                    <p class="subtitle">Change Your Password</p>
+                    <p class="subtitle">Mudar senha</p>
                   </div>
                   <div class="column has-text-centered is-two-fifths">
                     <button class="button is-rounded is-primary" @click="gotoPage('/changepassword/', 'settings')">
                       <span class="icon is-small">
                         <i class="fas fa-lock"></i>
                       </span>
-                      <span>Change</span>
+                      <span>Mudar</span>
                     </button>
                   </div>
                   <div class="column is-three-fifths">
-                    <p class="subtitle">Change Your Email</p>
+                    <p class="subtitle">Mudar EMAIL</p>
                   </div>
                   <div class="column has-text-centered is-two-fifths">
-                    <button class="button is-rounded is-primary" @click="alerts('Under Development')">
+                    <button class="button is-rounded is-primary" @click="alerts('em desenvolvimento')">
                       <span class="icon is-small">
                         <i class="fas fa-envelope"></i>
                       </span>
@@ -106,17 +106,17 @@
             </div>
             <div class="column is-full">
               <div class="box has-background-danger">
-                <h3 class="title has-text-centered has-text-white has-text-weight-bold">Danger Zone</h3>
+                <h3 class="title has-text-centered has-text-white has-text-weight-bold">Área ResTriTa</h3>
                 <div class="columns is-vcentered is-centered is-multiline is-mobile">
                   <div class="column is-three-fifths">
-                    <p class="subtitle has-text-white">Delete Your Account</p>
+                    <p class="subtitle has-text-white">Excluir conta</p>
                   </div>
                   <div class="column is-two-fifths">
                     <button class="button is-rounded is-warning" @click="gotoPage('/me/', 'delete')">
                       <span class="icon is-small">
                         <i class="fas fa-user-times"></i>
                       </span>
-                      <span>Delete</span>
+                      <span>Excluir</span>
                     </button>
                   </div>
                 </div>

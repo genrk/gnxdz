@@ -1,5 +1,5 @@
 {
-  "_name": "🇬🇧English",
+  "_name": "Portuguese",
   "languages": "Languages",
   "index": "Home",
   "folder": "Folder",
@@ -7,8 +7,8 @@
     "title": "Notify"
   },
   "copy": {
-    "success": "Copy successful",
-    "error": "Copy failed"
+    "success": "Copiado com sucesso",
+    "error": "Falha na cópia"
   },
   "list": {
     "view": {
@@ -17,22 +17,22 @@
     },
     "auth": "Directory encryption, please enter password",
     "title": {
-      "file": "File",
-      "moditime": "Modified Time",
-      "size": "Size",
-      "operation": "Actions"
+      "file": "Arquivo",
+      "moditime": "Data de modificação",
+      "size": "Tamanho",
+      "operation": "Ações"
     },
-    "loading": "Loading...",
+    "loading": "Carregando...",
     "opt": {
-      "copy": "Copy link",
-      "newTab": "Open a new tab",
+      "copy": "Copiar link",
+      "newTab": "Abrir numa nova aba",
       "download": "Download"
     },
     "total": "Total",
     "item": "item"
   },
   "search": {
-    "placeholder": "Search resources..."
+    "placeholder": "Pesquisar..."
   },
   "page": {
     "video": {
@@ -41,7 +41,7 @@
         "link": "Download link"
     },
     "text": {
-      "loading": "Loading..."
+      "loading": "Carregando..."
     }
   },
   "setting": {

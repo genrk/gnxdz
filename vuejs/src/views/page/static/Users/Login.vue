@@ -15,12 +15,12 @@
                           <span class="icon">
                             <i class="fab fa-superpowers"></i>
                           </span>
-                          <span> Ahh!! Perfect !</span>
+                          <span> Ahh!! Perfeito!</span>
                         </p>
                         <p class="subtitle">Login</p>
                         <div class="content">
-                            <p class="has-text-dark has-text-weight-semibold">Login to this Website to Continue.</p>
-                            <p class="has-text-dark">You are Just a Page from Experiencing the Glory.</p>
+                            <p class="has-text-dark has-text-weight-semibold">Login para continuar neste site.</p>
+                            <p class="has-text-dark">Faça bom proveito.</p>
                         </div>
                       </article>
                     </div>
@@ -63,7 +63,7 @@
               </div>
               <div class="field">
                 <p class="control has-icons-left">
-                  <input class="input is-rounded" id="password" type="password" placeholder="Password" v-model="password" required :autofocus="passwordFocus">
+                  <input class="input is-rounded" id="password" type="password" placeholder="Senha" v-model="password" required :autofocus="passwordFocus">
                   <span class="icon is-small is-left">
                     <i class="fas fa-lock"></i>
                   </span>
@@ -129,10 +129,10 @@ import 'vue-loading-overlay/dist/vue-loading.css';
                             this.$bus.$emit('logged', 'User Logged')
                             setTimeout(() => {
                               if(this.$route.params.nextUrl != null){
-                                this.$router.push({name: "results", params: { id: this.currgd.id, cmd: "result", success: true, data: "Log in Successfull. You Will be Redirected Through a Secure Channel.", redirectUrl: this.$route.params.nextUrl }});
+                                this.$router.push({name: "results", params: { id: this.currgd.id, cmd: "result", success: true, data: "Login feito com SUCESSO. Você será direcionado através de um canal seguro.", redirectUrl: this.$route.params.nextUrl }});
                               }
                               else{
-                                  this.$router.push({name: "results", params: { id: this.currgd.id, cmd: "result", success: true, tocmd: 'home', data: "Log in Successfull. You Will be Redirected Through a Secure Channel.", redirectUrl: '/' }})
+                                  this.$router.push({name: "results", params: { id: this.currgd.id, cmd: "result", success: true, tocmd: 'home', data: "Login feito com SUCESSO. Você será direcionado através de um canal seguro.", redirectUrl: '/' }})
                               }
                             }, 500)
                           }

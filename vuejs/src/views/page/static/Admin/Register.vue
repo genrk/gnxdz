@@ -8,8 +8,8 @@
           <div class="columns is-desktop is-multiline is-centered">
             <div class="column is-full">
               <div class="box has-background-primary">
-                <p class="title has-text-weight-bold has-text-white has-text-centered">Currently Logged as</p>
-                <p class="subtitle has-text-weight-bold has-text-white has-text-centered">Scroll Down to Accept Users</p>
+                <p class="title has-text-weight-bold has-text-white has-text-centered">Logado como:</p>
+                <p class="subtitle has-text-weight-bold has-text-white has-text-centered">Desce a bola para aceitar novos usuários</p>
                 <div class="columns is-vcentered is-multiline is-mobile">
                   <div class="column is-three-fifths">
                     <p class="subtitle has-text-black">Admin Name</p>
@@ -18,14 +18,14 @@
                     <p class="subtitle has-text-black has-text-weight-bold">{{ user.name }}</p>
                   </div>
                   <div class="column is-three-fifths">
-                    <p class="subtitle has-text-black">Currently You are</p>
+                    <p class="subtitle has-text-black">Você é</p>
                   </div>
                   <div class="column is-two-fifths">
                     <p class="subtitle has-text-black has-text-weight-bold">{{ user.role }}</p>
                   </div>
                   <div v-if="user.admin && !user.superadmin" class="column is-full">
                     <p class="subtitle has-text-weight-bold has-text-warning-dark">
-                      Your Scope is Restricted to Adding Additional Users. Use the Below Button to get Pending User Requests.
+                      Sua CLASSE é baixa para adicionar usuários. Use o botão abaixo para ver as requisições de usuários pendentes.
                     </p>
                   </div>
                   <div v-if="user.admin && !user.superadmin" class="column has-text-centered is-full">
@@ -33,12 +33,12 @@
                       <span class="icon is-small">
                         <i class="fas fa-user-shield"></i>
                       </span>
-                      <span>Request</span>
+                      <span>Requisitar</span>
                     </button>
                   </div>
                   <div v-if="user.admin && user.superadmin" class="column is-full">
                     <p class="subtitle has-text-weight-bold has-text-danger-dark">
-                      Your Scope is Maximum and Can Add Additional Users, Promote Users.Use the Below Buttons to get Pending User Requests.
+                      Sua CLASSE é a maior e pode adicionar usuários e promove-los. Use o botão abaixo para ver as requisições de usuários pendentes.
                     </p>
                   </div>
                 </div>
@@ -54,7 +54,7 @@
                 <section class="modal-card-body">
                   <div v-if="pendingUserList.length == 0" class="columns is-centered is-mobile">
                     <div class="column has-text-centered is-full">
-                      <p class="subtitle has-text-black">No Pending User Requests</p>
+                      <p class="subtitle has-text-black">Nenhuma requisição de usuário</p>
                     </div>
                   </div>
                   <div v-else class="columns is-centered is-mobile" v-for="user in pendingUserList" v-bind:key="user.name">
@@ -66,7 +66,7 @@
                         <span class="icon is-small">
                           <i class="fas fa-user-plus"></i>
                         </span>
-                        <span>Accept</span>
+                        <span>Aceitar</span>
                       </button>
                     </div>
                   </div>
@@ -77,11 +77,11 @@
               <div class="columns is-dekstop is-multiline">
                 <div class="column is-full">
                   <div class="box has-background-dark">
-                    <h3 class="title has-text-weight-bold has-text-white has-text-centered">Pending Users</h3>
+                    <h3 class="title has-text-weight-bold has-text-white has-text-centered">Usuários Pendentes</h3>
                     <div class="columns is-desktop is-multiline is-vcentered">
                       <div class="column is-two-thirds">
                         <p class="subtitle has-text-weight-semibold has-text-white">
-                          Pending Users
+                          Usuários Pendentes
                         </p>
                       </div>
                       <div class="column is-one-third">
@@ -94,7 +94,7 @@
                       </div>
                       <div v-if="user.admin && user.superadmin" class="column is-two-thirds">
                         <p class="subtitle has-text-weight-semibold has-text-white">
-                          Pending Admins
+                          ADMIN Pendentes
                         </p>
                       </div>
                       <div v-if="user.admin && user.superadmin" class="column is-one-third">
@@ -111,7 +111,7 @@
                         </p>
                       </div>
                       <div v-if="user.admin && user.superadmin" class="column is-one-third">
-                        <button class="button is-success" @click="modal = true; listname = 'Admins - Pending';getPendingUsers(pendingsuperadmin); setrole = 'superadmin';">
+                        <button class="button is-success" @click="modal = true; listname = 'Admins - Pendentes';getPendingUsers(pendingsuperadmin); setrole = 'superadmin';">
                           <span class="icon is-small">
                             <i class="fas fa-user-shield"></i>
                           </span>
@@ -128,17 +128,17 @@
         <div class="column is centered has-text-centered has-text-white is-two-fifths">
           <article :class=" warnmessageVisibility ? 'message is-warning' : 'message is-hidden is-warning'">
             <div class="message-header">
-              <p>Important</p>
+              <p>Importante</p>
               <button class="delete" @click="warnmessageVisibility = false" aria-label="delete"></button>
             </div>
             <div class="message-body">
-              <span>Only Pending User and Admin Requests can be Accepted.Use Invite Option to Invite Users.</span>
+              <span>Apenas usuários pendentes ou requisições de ADMIN pode ser adicionadas. Use a opçõe de convidar usuários para novos usuários</span>
               <div class="buttons is-centered mt-2">
                 <button class="button is-rounded is-danger" @click="gotoPage('/user/', 'invite')">
                   <span class="icon is-small">
                     <i class="fas fa-user-plus"></i>
                   </span>
-                  <span>Invite</span>
+                  <span>Convidar</span>
                 </button>
               </div>
             </div>
@@ -154,7 +154,7 @@
           </article>
           <article :class=" successMessage ? 'message is-success' : 'message is-hidden is-success'">
             <div class="message-header">
-              <p>Success !</p>
+              <p>Successo!</p>
               <button class="delete" @click="successMessage = false" aria-label="delete"></button>
             </div>
             <div class="message-body">
@@ -162,7 +162,7 @@
             </div>
           </article>
           <h2 class="title has-text-weight-bold has-text-white">Add / Promote Users</h2>
-          <p class="is-small has-text-white has-text-weight-bold">User Details will be Autopopulated After Selecting User</p>
+          <p class="is-small has-text-white has-text-weight-bold">Os detalhes do usuário serão preenchidos automaticamente, após selecionar o mesmo.</p>
           <form @submit.prevent="handleSubmit">
             <div class="field">
               <div class="control has-icons-left has-icons-right">
@@ -185,28 +185,28 @@
                 <span class="icon is-small is-right">
                   <i class="fas fa-check"></i>
                 </span>
-                <p class="help is-warning">Email of Recipient(Auto Filled)</p>
+                <p class="help is-warning">Email do pidinte(Auto Filled)</p>
               </div>
             </div>
             <div class="field">
               <div class="control">
-                <textarea class="textarea is-success is-rounded" disabled placeholder="Message From Recipient" id="message" rows="3" v-model="message" required></textarea>
-                <p class="help is-warning">Message From Recipient(Auto Filled)</p>
+                <textarea class="textarea is-success is-rounded" disabled placeholder="Messagem do pidinte" id="message" rows="3" v-model="message" required></textarea>
+                <p class="help is-warning">Messagem do pidinte(Auto Filled)</p>
               </div>
             </div>
-            <label class="subtitle has-text-white"> User's Role(Auto Filled)</label>
+            <label class="subtitle has-text-white"> Classe do usuário(Auto Filled)</label>
             <div class="control mb-3">
                 <input class="is-checkradio is-small is-warning" id="userradio" type="radio" name="role" checked value="user" disabled v-model="role">
-                <label for="userradio">User</label>
+                <label for="userradio">Usuário</label>
                 <input class="is-checkradio is-small is-warning" id="adminradio" type="radio" name="role" value="admin" disabled v-model="role">
                 <label for="adminradio"> Admin</label>
                 <input class="is-checkradio is-small is-warning" id="superadminradio" type="radio" name="role" value="superadmin" disabled v-model="role">
                 <label for="superadminradio">Superadmin</label>
             </div>
-            <p v-if="admin && !superadmin" class="help is-warning">Only Superadmin can Accept Admin & Superadmin users</p>
+            <p v-if="admin && !superadmin" class="help is-warning">Apenas SUPERadmin pode aceitar novos ADMIN e SUPERadmin</p>
             <div class="field">
               <p class="control has-icons-left">
-                <input class="input is-rounded" id="password" type="password" placeholder="Your Admin Password" v-model="password" required>
+                <input class="input is-rounded" id="password" type="password" placeholder="Senha do ROOT" v-model="password" required>
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
@@ -217,7 +217,7 @@
                 <div class="b-checkbox is-warning is-circular is-inline">
                   <input class="styled has-text-success" type="checkbox" id="terms" name="terms" v-model="checked">
                   <label for="terms">
-                    <span class="content has-text-white">  I Accept and Read the <a class="has-text-warning" href="https://raw.githubusercontent.com/tks18/gindex-v4/dark-mode-0-1/CONTRIBUTING.md" target="_blank">Community Guidelines</a></span>
+                    <span class="content has-text-white">  Eu li e aceito os <a class="has-text-warning" href="https://raw.githubusercontent.com/tks18/gindex-v4/dark-mode-0-1/CONTRIBUTING.md" target="_blank">Termos</a></span>
                   </label>
                 </div>
               </div>
@@ -227,7 +227,7 @@
                 <div class="b-checkbox is-warning is-circular is-inline">
                   <input class="styled has-text-success" type="checkbox" id="code" name="terms" v-model="codechecked">
                   <label for="code">
-                    <span class="content has-text-white">  I Accept and Read the <a class="has-text-warning" href="https://github.com/tks18/gindex-v4/blob/dark-mode-0-1/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a></span>
+                    <span class="content has-text-white">  Eu li e aceito o <a class="has-text-warning" href="https://github.com/tks18/gindex-v4/blob/dark-mode-0-1/CODE_OF_CONDUCT.md" target="_blank">Código de Conduta</a></span>
                   </label>
                 </div>
               </div>
@@ -329,7 +329,7 @@ export default {
                     this.loading = false;
                     this.successMessage = false;
                     this.errorMessage = true;
-                    this.resultmessage = "Fill in the Form Properly"
+                    this.resultmessage = "Preencha essa porra corretamente"
                     this.password = "";
                 }
             },
@@ -405,7 +405,7 @@ export default {
             this.admin = true, this.superadmin = false, this.loading = false;
           } else {
             this.loading = false;
-            this.$router.push({ name: 'results', params: { id: this.currgd.id, cmd: "result", success: false, data: "UnAuthorized Route. Not Allowed.", redirectUrl: "/", tocmd: "home" } })
+            this.$router.push({ name: 'results', params: { id: this.currgd.id, cmd: "result", success: false, data: "Negativo. Aqui não é permitido.", redirectUrl: "/", tocmd: "home" } })
           }
         },
         created() {

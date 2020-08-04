@@ -21,7 +21,7 @@
           <form @submit.prevent="handleSubmit">
             <div class="field">
               <p class="control has-icons-left">
-                <input class="input is-rounded" id="oldpassword" type="password" placeholder="Your Old Password" v-model="oldpassword" required>
+                <input class="input is-rounded" id="oldpassword" type="password" placeholder="Sua senha antiga é" v-model="oldpassword" required>
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
@@ -29,7 +29,7 @@
             </div>
             <div class="field">
               <p class="control has-icons-left">
-                <input class="input is-rounded" id="newpassword" type="password" placeholder="New Password" v-model="newpassword" required>
+                <input class="input is-rounded" id="newpassword" type="password" placeholder="Nova senha" v-model="newpassword" required>
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
@@ -37,7 +37,7 @@
             </div>
             <div class="field">
               <p class="control has-icons-left">
-                <input class="input is-rounded" id="confirm-password" type="password" placeholder="Confirm Password" v-model="confirmpassword" required>
+                <input class="input is-rounded" id="confirm-password" type="password" placeholder="Confirmar Senha" v-model="confirmpassword" required>
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
@@ -92,7 +92,7 @@ import 'vue-loading-overlay/dist/vue-loading.css';
                         localStorage.removeItem("userdata");
                         this.loading = false;
                         this.$bus.$emit("logout", "User Logged Out");
-                        this.$router.push({ name: 'results', params: { id: this.currgd.id, cmd: "result", success: true, redirectUrl: '/', tocmd: 'login', data: `response.data.message. You have to Relogin with new Password` } })
+                        this.$router.push({ name: 'results', params: { id: this.currgd.id, cmd: "result", success: true, redirectUrl: '/', tocmd: 'login', data: `response.data.message. Você precisa relogar com sua senha nova` } })
                       } else {
                         this.errorMessage = true
                         this.loading = false;
@@ -101,7 +101,7 @@ import 'vue-loading-overlay/dist/vue-loading.css';
                     });
                 } else {
                   this.loading = false;
-                  this.resultmessage = "Passwords Do Not Match"
+                  this.resultmessage = "Senhas não coincidem"
                   this.newpassword = "";
                   this.confirmpassword = "";
                 }

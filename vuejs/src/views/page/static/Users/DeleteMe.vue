@@ -5,8 +5,8 @@
       </div>
       <div class="columns is-multiline has-text-centered is-desktop is-centered is-vcentered">
         <div class="column is-full">
-          <h2 class="title has-text-weight-bold has-text-white">Delete Your Account</h2>
-          <p class="is-small has-text-danger-dark has-text-weight-bold">Be Cautious !!</p>
+          <h2 class="title has-text-weight-bold has-text-white">Excluir conta</h2>
+          <p class="is-small has-text-danger-dark has-text-weight-bold">Seja cauteloso!!</p>
         </div>
         <div class="column is-half">
           <article :class=" errorMessage ? 'message is-danger' : 'message is-hidden is-danger'">
@@ -21,7 +21,7 @@
           <form @submit.prevent="handleSubmit">
             <div class="field">
               <p class="control has-icons-left">
-                <input class="input is-rounded" id="password" type="password" placeholder="Your Password" v-model="password" required>
+                <input class="input is-rounded" id="password" type="password" placeholder="Sua senha" v-model="password" required>
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
